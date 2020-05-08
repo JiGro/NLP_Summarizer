@@ -1,21 +1,21 @@
-# Summarizing texts using NLP
+# SUMMARIZING TEXTS USING NLTK AND NLP
 
 ![Logo of the project](https://cdn.pixabay.com/photo/2014/02/22/21/25/glasses-272401_960_720.jpg)
 
-### Natural Language Processing (NLP): What Is It and Why Is it Important?
+### NATURAL LANGUAGE PROCESSING (NLP): WHAT IS IT AND WHY IS IT IMPORTANT?
 **Natural language processing (NLP)** is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data.
 
 NLP can also have significant impact in the business environment. Since the personal performance of each employee is the bedrock of business productivity and success, correctly applied **NLP can** improve staff confidence and morale, **increase team performance and productivity and in turn improve customer satisfaction**.
 
-### Project intention
+### PROJECT INTENTION
 This .py script is my first approach to text processing. By utilizing the NLTK library in combination with a basic math algorithm, a given input text will be summarized. The threshold variable allows for adjustment of the summary length. The higher the threshold, the fewer words make the cut. I found the threshold of 1.3 to work perfectly.
 
-🛑🛑🛑 **Disclaimer** 🛑🛑🛑
+🛑🛑🛑 **DISCLAIMER** 🛑🛑🛑
 
 The following sections might include code snippets in order to allow following my thought process. However, steps have been cut out. For detailed code refer to .py file.
 
 ***
-### 1.) Creating a Frequency Table
+### 1.) CREATING A FREQUENCY TABLE
 
 Input text from: https://en.wikipedia.org/wiki/Pomodoro_Technique
 
@@ -35,7 +35,8 @@ First, we dissect the input string / text and create a list of single word snipp
 
 ```
 
-### 2.) Creating a sentence list
+***
+### 2.) CREATING A SENTENCE LIST
 We utilize NLTK's sent_tokenize() function to split the input text into full sentences. This will help us in further calculate the sentence scores.
 
 ```shell
@@ -47,7 +48,7 @@ We utilize NLTK's sent_tokenize() function to split the input text into full sen
 ```
 
 ***
-### 3.) Output dictionary with scores for each sentence
+### 3.) OUTPUT DICTIONARY WITH SCORE FOR EACH SENTENCE 
 Next, we loop through the entire sentence list from 2.). We now select the first 10 characters of each sentence and check for matches in the frequency table from 1.). Finally, we generate a final score for each sentence by floor dividing the frequencies by the word count.
 
 ```shell
@@ -61,7 +62,7 @@ Next, we loop through the entire sentence list from 2.). We now select the first
  ```
  
 ***
-### 4.) Calculation of average sentence score
+### 4.) CALCULATION OF AVERAGE SENTENCE SCORE
 We calculate the average sentence score by adding up all individual scores and diving through the length of the sentence list
 
 ```shell
@@ -70,7 +71,7 @@ Out: 4
  ```
  
 ***
-### 5.) Summary
+### 5.) SUMMARY GENERATOR
 In the last step, we use the defined threshold variable to identify those sentences that make the cut. These will be added to the summary string, which will then be printed out. 
 
 ```shell
