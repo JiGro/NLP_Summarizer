@@ -51,13 +51,13 @@ def summary_generator(sentences, sentenceVal, threshold):
     return summary
 
 
-input_str = input("What summary from Wiki do you wish to receive?")
+input_str = input('What summary from Wiki do you wish to receive?')
 input_list = wikipedia.search(input_str)
 print(input_list)
-print("Which page do you want?")
+print('Which page do you want?')
 response = ''
 while response not in input_list:
-    response = input("Please copy from list above without quotes and paste here: ")
+    response = input('Please copy from list above without quotes and paste here: ')
 
 print('*** Summary: ' + str(response) + '***')
 wiki_page = wikipedia.page(response)
