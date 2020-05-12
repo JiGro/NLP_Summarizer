@@ -19,13 +19,13 @@ The following sections might include code snippets in order to allow following m
 
 First, the user will be asked to provide a search query for Wikipedia. After that, the user can choose between all linked Wikipedia articles to generate the summary as wished.
 ```
-input_str = input("What summary from Wiki do you wish to receive?")
+input_str = input('What summary from Wiki do you wish to receive?')
 input_list = wikipedia.search(input_str)
 print(input_list)
-print("Which page do you want?")
+print('Which page do you want?')
 response = ''
 while response not in input_list:
-    response = input("Please copy from list above without quotes and paste here: ")
+    response = input('Please copy from list above without quotes and paste here: ')
 ```
 
 Example string from Wikipedia for the article https://en.wikipedia.org/wiki/Pomodoro_Technique:
@@ -85,6 +85,6 @@ Out: 4
 In the last step, we use the defined threshold variable to identify those sentences that make the cut. These will be added to the summary string, which will then be printed out. 
 
 ```shell
-Set the pomodoro timer (traditionally to 25 minutes). Work on the task. A short (3–5 minutes) rest separates consecutive pomodoros. Four pomodoros form a set. Some variations include: Work in 90 minute time periods. Rather than a 25 minute focus period, work in 90 minute blocks. Work in natural time periods. Use these to define focus periods. Flowtime.
+'Set the pomodoro timer (traditionally to 25 minutes). Work on the task. A short (3–5 minutes) rest separates consecutive pomodoros. Four pomodoros form a set. Some variations include: Work in 90 minute time periods. Rather than a 25 minute focus period, work in 90 minute blocks. Work in natural time periods. Use these to define focus periods. Flowtime.'
  ```
 
